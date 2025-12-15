@@ -6,7 +6,7 @@
     <title>Tic Tac Toe 3D Online - Juego Multijugador</title>
     <meta name="description" content="Juega Tic Tac Toe 3D en línea con amigos. Versión multijugador del clásico juego en 3D con 4x4x4 tablero.">
     <meta name="keywords" content="tic tac toe, 3d, multijugador, juego online, 4 en raya, 3d game">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎮</text></svg>">
@@ -25,21 +25,7 @@
                 <p class="subtitle">Juega en línea con amigos desde cualquier lugar</p>
             </div>
             
-            <div class="game-stats">
-                <div class="stat-item">
-                    <div class="stat-value" id="onlinePlayers">0</div>
-                    <div class="stat-label">Jugadores Online</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="activeGames">0</div>
-                    <div class="stat-label">Partidas Activas</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="totalGames">0</div>
-                    <div class="stat-label">Total Partidas</div>
-                </div>
-            </div>
-            
+
             <div class="quick-play-buttons">
                 <button class="quick-play-btn create" onclick="quickCreateGame()">
                     <i class="fas fa-plus-circle"></i> CREAR SALA RÁPIDO
@@ -330,6 +316,6 @@
         <source src="https://assets.mixkit.co/sfx/preview/mixkit-game-show-wrong-answer-buzz-950.mp3" type="audio/mpeg">
     </audio>
     
-    <script src="{{ url_for('static', filename='game.js') }}"></script>
+    <script src="/static/game.js"></script>
 </body>
 </html>
