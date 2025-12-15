@@ -3,8 +3,11 @@ from flask_socketio import SocketIO, emit, join_room, leave_room
 import random
 import json
 import os
+import time
+
 import eventlet
 eventlet.monkey_patch()
+
 
 
 app = Flask(__name__)
@@ -35,7 +38,8 @@ class Game:
         self.winner = None
         self.game_over = False
         self.winning_cells = []
-        self.created_at = os.times().elapsed
+        self.created_at = time.time()
+
         
     def make_move(self, z, y, x, player):
         if self.game_over or player != self.current_player:
